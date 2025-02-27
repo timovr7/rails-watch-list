@@ -71,3 +71,4 @@ gem "sassc-rails"
 
 gem 'ostruct'
 
+gem "faker"
