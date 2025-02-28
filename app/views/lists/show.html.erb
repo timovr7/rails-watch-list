@@ -9,9 +9,8 @@
       <%= bookmark.movie.title %>
       <!-- Delete link for each bookmark -->
       <%= link_to "Delete", list_bookmark_path(@list, bookmark),
-                  data: { turbo_method: :delete,
-                          turbo_confirm: "Are you bird???" },
-                  class: "btn btn-danger btn-sm" %>
+      data: { turbo_method: :delete, turbo_confirm: "Are you bird???" },
+      class: "btn btn-danger btn-sm rounded" %>
     </li>
   <% end %>
 </ul>
@@ -21,4 +20,3 @@
 <br>
 <br>
 <%= link_to "go back to homepage 🏠",  lists_path%>
-

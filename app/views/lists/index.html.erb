@@ -2,10 +2,13 @@
 
 <ul>
   <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list.id) %></li>
+  <li>
+    <%= link_to list.name, list_path(list.id) %>
+    <%= link_to "Delete", list_path(list.id),
+    data: { turbo_method: :delete, turbo_confirm: "Are you bird???" },
+    class: "btn btn-danger btn-sm rounded" %>
+  </li>
   <%end%>
 </ul>
 
 <%= link_to "+ add a new list",  new_list_path%>
-
-<%= link_to "check out all movies",  new_list_path%>

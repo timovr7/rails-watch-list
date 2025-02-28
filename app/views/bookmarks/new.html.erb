@@ -2,6 +2,12 @@
 
  <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment %>
-    <%= f.association :movie, as: :select, collection: Movie.order(:title)%>
+    <%= f.association :movie, collection: Movie.order(:title)%>
     <%= f.button :submit, class: 'btn btn-primary'%>
  <% end %>
+
+
+
+<br>
+<br>
+<%= link_to "go back to homepage 🏠",  lists_path%>
